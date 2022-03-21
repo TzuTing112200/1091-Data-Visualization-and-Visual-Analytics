@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infect-dublin Graph Visualization - node-link diagrams vs. adjacency matrix</title>
+    
+    <style type="text/css">
+	  body {
+	    overflow: scroll;
+	  }
+	  
+	  .svg_block {
+	    border: 3px solid;
+	  }
+	
+      text {
+        font-family: sans-serif;
+      }
+	  
+	  td {
+        padding: 4px 4px 0px 4px;
+	  }
+	  
+	  #label {
+	    font-size: 1px;
+	  }
+    </style>
+    <script src="https://unpkg.com/d3@6.2.0/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+    <script src="https://unpkg.com/d3-force@2.1.1/dist/d3-force.min.js"></script>
+  </head>
+  <body>
+    <table style="border-spacing:10px;">
+	  <tr>
+	    <td>
+		  <text style="font-weight:bold;">&nbsp;node-link diagrams</text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <text><span style="color:#9467bd;font-weight:bold;">0 ~ 9</span></text>&nbsp;、&nbsp;
+		  <text><span style="color:#1f77b4;font-weight:bold;">10 ~ 19</span></text>&nbsp;、&nbsp;
+		  <text><span style="color:#2ca02c;font-weight:bold;">20 ~ 29</span></text>&nbsp;、&nbsp;
+		  <text><span style="color:#FFD306;font-weight:bold;">30 ~ 39</span></text>&nbsp;、&nbsp;
+		  <text><span style="color:#ff7f0e;font-weight:bold;">40 ~ 50</span></text>
+		</td>
+	    <td>
+		  <text style="font-weight:bold;">&nbsp;adjacency matrix</text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <text style="font-weight:bold;">Order by&nbsp;:&nbsp;</text>
+		  <select id="select_order">
+            <option value="id_asc">Node ID (ASC)</option>
+            <option value="id_desc">Node ID (DESC)</option>
+            <option value="num_asc">Number of links (ASC)</option>
+            <option value="num_desc">Number of links (DESC)</option>
+          </select>
+		</td>
+	  </tr>
+	  <tr>
+	    <td class="svg_block"><svg id="node_link_diagrams" width="600" height="600"></svg></td>
+	    <td class="svg_block"><svg id="adjacency_matrix" width="600" height="600"></svg></td>
+	  </tr>
+	</table>
+	
+	<script src="309552017.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iris Parallel Coordinate Plots</title>
+    
+    <style type="text/css">
+      body {
+        margin: 0px;
+        overflow: hidden;
+      }
+
+      .select_div {
+        text-align: center;
+        margin: 10px;
+      }
+	  
+	  p {
+		display: inline;
+	  }
+
+      .edge path {
+        fill: none;
+        opacity: 0.2;
+      }
+
+      .axis line, .axis path {
+        fill: none;
+        stroke: black;
+      }
+
+      .axis text {
+        text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+        cursor: move;
+      }
+
+      .red {
+        fill: red;
+        color: red;
+        stroke: red;
+      }
+
+      .green {
+        fill: green;
+        color: green;
+        stroke: green;
+      }
+
+      .blue {
+        fill: blue;
+        color: blue;
+        stroke: blue;
+      }
+
+      .title {
+        fill: #635F5D;
+        font-size: 16 pt;
+        text-anchor: middle;
+        font-family: sans-serif;
+      }
+    </style>
+	
+    <script src="https://d3js.org/d3.v3.js"></script>
+  </head>
+  <body>
+    <div class="select_div">
+      <p class="red"> Iris-setosa </p>
+      &nbsp;&nbsp;&nbsp;
+      <p class="green"> Iris-versicolor </p>
+      &nbsp;&nbsp;&nbsp;
+      <p class="blue"> Iris-virginica </p>
+	  </br>
+	  
+	  <svg width="960" height="450"></svg>
+    </div>
+	<script src="309552017.js"></script>
+  </body>
+</html>
